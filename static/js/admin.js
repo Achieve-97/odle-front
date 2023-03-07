@@ -1,4 +1,4 @@
-const api_url = "http://localhost:8080/"; //공통 Url
+const api_url = "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/"; //공통 Url
 const url_postId = document.location.href.split('=')[1];
 
 $(document).ready(function () {

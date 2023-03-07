@@ -8,7 +8,7 @@ function postCreate() {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/posts",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts",
         headers: {
             "Authorization": localStorage.getItem('accessToken')
         },

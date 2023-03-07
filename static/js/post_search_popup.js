@@ -21,7 +21,7 @@ window.onclick = function (event) {
 
 function get_post(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id,
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id,
         type: "GET",
         dataType: "json",
         success: function (response) {
@@ -144,7 +144,7 @@ function append_tag_list(tag_list) {
 //게시글의 코멘트 리스트 가져오기
 function get_comments(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/comments",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/comments",
         type: "GET",
         dataType: "json",
         success: function (response) {
@@ -196,7 +196,7 @@ function get_comments(post_id) {
 //게시글 좋아요 or 좋아요 안한 상태 버튼 보이게 하기
 function showPostLikeButton(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/like-or-unlike",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/like-or-unlike",
         type: "GET",
         dataType: "json",
         headers: {
@@ -226,7 +226,7 @@ function showPostLikeButton(post_id) {
 //게시글 좋아요
 function like_post(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/like",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/like",
         type: "POST",
         dataType: "json",
         headers: {
@@ -247,7 +247,7 @@ function like_post(post_id) {
 //게시글 좋아요 취소
 function unlike_post(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/unlike",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/unlike",
         type: "DELETE",
         dataType: "json",
         headers: {
@@ -267,7 +267,7 @@ function unlike_post(post_id) {
 //게시글 삭제
 function delete_post(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id,
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id,
         type: "DELETE",
         dataType: "json",
         headers: {
@@ -288,7 +288,7 @@ function delete_post(post_id) {
 //댓글 좋아요 or 좋아요 안한 상태 버튼 보이게 하기
 function showCommentLikeButton(post_id, comment_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/comments/" + comment_id + "/like-or-unlike",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/comments/" + comment_id + "/like-or-unlike",
         type: "GET",
         dataType: "json",
         headers: {
@@ -318,7 +318,7 @@ function showCommentLikeButton(post_id, comment_id) {
 //댓글 좋아요
 function like_comment(post_id, comment_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/comments/" + comment_id + "/like",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/comments/" + comment_id + "/like",
         type: "POST",
         dataType: "json",
         headers: {
@@ -335,7 +335,7 @@ function like_comment(post_id, comment_id) {
 //댓글 좋아요 취소
 function unlike_comment(post_id, comment_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/comments/" + comment_id + "/unlike",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/comments/" + comment_id + "/unlike",
         type: "DELETE",
         dataType: "json",
         headers: {
@@ -352,7 +352,7 @@ function unlike_comment(post_id, comment_id) {
 
 function create_comment(post_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/comments",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/comments",
         type: "POST",
         contentType: "application/json; charset=UTF-8",
         headers: {
@@ -370,7 +370,7 @@ function create_comment(post_id) {
 
 function delete_comment(post_id, comment_id) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + post_id + "/comments/" + comment_id,
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + post_id + "/comments/" + comment_id,
         type: "DELETE",
         dataType: "json",
         headers: {

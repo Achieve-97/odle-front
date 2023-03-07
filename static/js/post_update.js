@@ -8,7 +8,7 @@ const url_postId = document.location.href.split('=')[1];
 
 function getPost() {
     $.ajax({
-        url: "http://localhost:8080/posts/" + url_postId,
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + url_postId,
         type: "GET",
         dataType: "json",
         success: function (response) {
@@ -83,7 +83,7 @@ function getPost() {
 function postUpdate() {
     $.ajax({
         type: "PATCH",
-        url: "http://localhost:8080/posts/" + url_postId,
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + url_postId,
         headers: {
             "Authorization": localStorage.getItem('accessToken')
         },
@@ -107,7 +107,7 @@ function postUpdate() {
 
 function getMySimpleProfile() {
     var settings = {
-        "url": "http://localhost:8080/users/profile/simple",
+        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {

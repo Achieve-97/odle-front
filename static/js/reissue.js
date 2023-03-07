@@ -34,7 +34,7 @@ function countdown() {
 
 function reissueToken() {
     $.ajax({
-        url: "http://localhost:8080/users/reissue",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/reissue",
         type: "POST",
         dataType: "json",
         headers: {

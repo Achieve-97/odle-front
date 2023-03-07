@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
 // 상단바에 보이는 내 프로필
 function getMySimpleProfile() {
     var settings = {
-        "url": "http://localhost:8080/users/profile/simple",
+        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -67,7 +67,7 @@ function getMySimpleProfile() {
 // 게시글
 function getPost() {
     var settings = {
-        "url": "http://localhost:8080/posts",
+        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -184,7 +184,7 @@ function getPost() {
 
 function showUpdateButton(userId, postId) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + postId,
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + postId,
         type: "GET",
         dataType: "json",
         headers: {
@@ -200,7 +200,7 @@ function showUpdateButton(userId, postId) {
 
 function showFollowButton(userId, postId) {
     $.ajax({
-        url: "http://localhost:8080/users/" + userId + "/follow-or-unfollow",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/" + userId + "/follow-or-unfollow",
         type: "GET",
         dataType: "json",
         headers: {
@@ -228,7 +228,7 @@ function showFollowButton(userId, postId) {
 
 function followUser(userId) {
     var settings = {
-        "url": "http://localhost:8080/users/" + userId + "/follow",
+        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/" + userId + "/follow",
         "method": "POST",
         "timeout": 0,
         "headers": {
@@ -247,7 +247,7 @@ function followUser(userId) {
 
 function unfollowUser(userId) {
     var settings = {
-        "url": "http://localhost:8080/users/" + userId + "/unfollow",
+        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/" + userId + "/unfollow",
         "method": "DELETE",
         "timeout": 0,
         "headers": {
@@ -267,7 +267,7 @@ function unfollowUser(userId) {
 //게시글 좋아요 or 좋아요 안한 상태 버튼 보이게 하기
 function showFeedLikeButton(postId) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + postId + "/like-or-unlike",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + postId + "/like-or-unlike",
         type: "GET",
         dataType: "json",
         headers: {
@@ -296,7 +296,7 @@ function showFeedLikeButton(postId) {
 //게시글 좋아요
 function likePost(postId) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + postId + "/like",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + postId + "/like",
         type: "POST",
         dataType: "json",
         headers: {
@@ -314,7 +314,7 @@ function likePost(postId) {
 //게시글 좋아요 취소
 function unlikePost(postId) {
     $.ajax({
-        url: "http://localhost:8080/posts/" + postId + "/unlike",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/" + postId + "/unlike",
         type: "DELETE",
         dataType: "json",
         headers: {

@@ -1,5 +1,5 @@
 
-const api_url = "http://localhost:8080/users/"; //공통 Url
+const api_url = "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/"; //공통 Url
 const url_userId = document.location.href.split('=')[1]; // 추후 프로필 화면 누를 시 Id 받아오도록 변경
 let login_userId;
 
@@ -195,7 +195,7 @@ function show_button(followerList) {
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ팔로우/팔로우 취소하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ//
 function followUser(followUserId) {
     $.ajax({
-        url: "http://localhost:8080/users/" + followUserId + "/follow",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/" + followUserId + "/follow",
         type: "POST",
         dataType: "json",
         headers: {
@@ -213,7 +213,7 @@ function followUser(followUserId) {
 
 function unfollowUser(UnfollowUserId) {
     $.ajax({
-        url: "http://localhost:8080/users/" + UnfollowUserId + "/unfollow",
+        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/" + UnfollowUserId + "/unfollow",
         type: "DELETE",
         dataType: "json",
         headers: {
