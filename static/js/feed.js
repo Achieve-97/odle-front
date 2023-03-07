@@ -59,7 +59,7 @@ function getMySimpleProfile() {
         $('#myProfile15').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
         $('#myProfile16').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
         $('#myProfile17').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-    }).error(function () {
+    }).fail(function () {
         window.location = "./signin.html"
     });
 }
