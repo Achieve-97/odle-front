@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feed_우리색으로 칠하조</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigation">
+        <div class="navigation__column">
+            <a href="index.html">
+                <img src="../static/images/main_logo.jpg" />
+            </a>
+        </div>
+        <div class="mini_porfile_box">
+            <div class="expiration_time">
+                <span id="expiration_time"></span>
+                <button id="reissue_token" onclick="reissueToken()">접속 연장</button>
+            </div>
+            <div class="navigation__profile">
+                <div class="photo__header">
+                    <a id="myProfile6" role="link" tabindex="0">
+                        <img alt="프로필 사진" src="" id="myProfileImage3" class="photo__avatar" />
+                    </a>
+                    <div class="photo__user-info">
+                        <a id="myProfile7" role="link" tabindex="0">
+                            <span class="photo__author" id="myProfileUsername3"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 여기서부터 사이드바 -->
+    <aside class="sidebar">
+        <ul>
+            <li class="list">
+                <div class="toggle">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="menu-outline" class="open"></ion-icon></span>
+                        <span class="title">메뉴 접기</span>
+                    </a>
+                </div>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="index.html">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">홈</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <div>
+                    <a id="myProfile8">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">프로필</span>
+                    </a>
+                </div>
+            </li>
+            <li class="list active">
+                <b></b>
+                <b></b>
+                <a href="chart.html">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="title">실시간 Top</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="alert-outline"></ion-icon></span>
+                    <span class="title">알림</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="post.html">
+                    <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
+                    <span class="title">게시글 작성</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="edit-profile.html">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="title">설정</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="signin.html">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">로그아웃</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- 여기까지 사이드바 -->
+    <main id="music-chart">
+        <div class="chart__container">
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😡 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getAngryChart">
+                </div>
+            </div>
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😭 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getSadChart">
+                </div>
+            </div>
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😱 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getScreamChart">
+                </div>
+            </div>
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😳 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getShyChart">
+                </div>
+            </div>
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😆 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getHappyChart">
+                </div>
+            </div>
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😍 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getLoveChart">
+                </div>
+            </div>
+            <div class="chart__emotion">
+                <div class="chart__title">
+                    <span>😎 TOP6</span>
+                </div>
+                <div class="chart__music-list" id="getFlexChart">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- JQuery 사용 설정 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- js 파일 링크 -->
+    <script src="../static/js/sidebar.js"></script>
+    <script src="../static/js/chart.js"></script>
+    <script src="../static/js/reissue.js"></script>
+</body>
+
+</html>

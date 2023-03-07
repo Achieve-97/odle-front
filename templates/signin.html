@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>오늘 뭐들었니?</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<div class="top">
+			<div class="logo">
+				<img src="../static/images/low-res-logo.png" alt="instagram" style="width: 175px;">
+			</div>
+			<div class="form">
+				<div class="input_field">
+					<input type="text" id="email" placeholder="이메일을 입력하세요" class="input">
+				</div>
+				<div class="input_field">
+					<input type="password" id="password" placeholder="비밀번호를 입력하세요" class="input">
+				</div>
+				<div class="btn" onclick="signIn()"><a href="#">로그인</a></div>
+			</div>
+			<!-- <div class="or">
+				<div class="line"></div>
+				<p>OR</p>
+				<div class="line"></div>
+			</div>
+			<div class="dif">
+				<div class="forgot">
+					<a href="#">비밀번호 찾기</a>
+				</div>
+			</div> -->
+		</div>
+		<div class="signup">
+			<p>계정이 없으신가요? <a href="signup.html">회원가입</a></p>
+			<p><a href="signup-admin.html">관리자 회원가입</a></p>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script src="../static/js/signin.js"></script>
+
+</html>
