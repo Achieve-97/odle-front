@@ -8,7 +8,7 @@ function postCreate() {
 
     $.ajax({
         type: "POST",
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts",
+        url: "http://localhost:8080/posts",
         headers: {
             "Authorization": localStorage.getItem('accessToken')
         },
@@ -34,7 +34,7 @@ function postCreate() {
 
 function getMySimpleProfile() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/profile/simple",
+        "url": "http://localhost:8080/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -62,7 +62,7 @@ function getMusicSearchList() {
     const keyword = $(`#music-keyword`).val();
     console.log(option, keyword);
     var settings = {
-        "url": `http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/music/search/${option}/${keyword}`,
+        "url": `http://localhost:8080/music/search/${option}/${keyword}`,
         "method": "GET",
         "timeout": 0,
         "headers": {

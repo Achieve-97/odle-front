@@ -1,7 +1,7 @@
 function signIn() {
     var settings = {
         type: "POST",
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/login",
+        url: "http://localhost:8080/users/login",
         data: JSON.stringify({
             email: $(`#email`).val(),
             password: $(`#password`).val()

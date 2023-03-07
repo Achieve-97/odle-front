@@ -6,7 +6,7 @@ let login_search_userId;
 // 페이지가 로딩될 때 실행되는 거
 jQuery(document).ready(function ($) {
     getMySimpleProfile1();
-    getTagInfo()
+    getTagInfo();
     getPostSearchCount();
     getPostSearchList();
 });
@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 // 상단바 프로필 보기
 function getMySimpleProfile1() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/profile/simple",
+        "url": "http://localhost:8080/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -24,15 +24,18 @@ function getMySimpleProfile1() {
 
     $.ajax(settings).done(function (response, status) {
         login_search_userId = response['userId']
-        $('#myProfileUsername4').text(response['username'])
-        $('#myProfileImage4').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileUsername9').text(response['username'])
+        $('#myProfileImage9').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
         if (status === 403) { // 권한이 없는 것이니까 로그인으로 보내면 됨
             window.location = "/login.html"
         }
         const userId = response['userId']
-        $('#myProfile9').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile10').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile11').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        const tokenExpiration = response['tokenExpiration']
+        const expiration_time = new Date(tokenExpiration).getTime();
+        timer(expiration_time)
+        $('#myProfile18').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile19').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile20').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
     });
 }
 
@@ -44,7 +47,7 @@ function getTagInfo() {
 // 검색된 게시글 개수
 function getPostSearchCount() {
     var settings = {
-        "url": `http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts/search/${word}/post-count`,
+        "url": `http://localhost:8080/posts/search/${word}/post-count`,
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -63,7 +66,7 @@ function getPostSearchCount() {
 // 검색창 클릭
 function getPostSearchList() {
     const settings = {
-        "url": `http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts/search/${word}`,
+        "url": `http://localhost:8080/posts/search/${word}`,
         "method": "GET",
         "timeout": 0,
         "headers": {

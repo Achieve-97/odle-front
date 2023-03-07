@@ -1,6 +1,6 @@
 function emailCheck() {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/check-email",
+        url: "http://localhost:8080/users/check-email",
         type: "POST",
         data: JSON.stringify({
             email: $(`#email`).val()
@@ -17,7 +17,7 @@ function emailCheck() {
 
 function emailCode() {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/email",
+        url: "http://localhost:8080/users/email",
         type: "POST",
         data: JSON.stringify({
             email: $(`#email`).val()
@@ -34,7 +34,7 @@ function emailCode() {
 
 function emailCodeCheck() {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/verify-code",
+        url: "http://localhost:8080/users/verify-code",
         type: "POST",
         data: JSON.stringify({
             email: $(`#email`).val(),
@@ -55,7 +55,7 @@ function emailCodeCheck() {
 
 function usernameCheck() {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/check-username",
+        url: "http://localhost:8080/users/check-username",
         type: "POST",
         data: JSON.stringify({
             username: $(`#username`).val()
@@ -74,7 +74,7 @@ function signUp() {
     // if ($("#email").attr("readonly") !== undefined && $("#code").attr("readonly") !== undefined){
     $.ajax({
         type: "POST",
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/signup",
+        url: "http://localhost:8080/users/signup",
         data: JSON.stringify({
             username: $(`#username`).val(),
             email: $(`#email`).val(),

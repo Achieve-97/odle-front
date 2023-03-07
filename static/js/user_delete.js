@@ -1,6 +1,6 @@
 function inactivateMe() {
     const settings = {
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/inactivation",
+        url: "http://localhost:8080/users/inactivation",
         type: "PATCH",
         timeout: 0,
         headers: {

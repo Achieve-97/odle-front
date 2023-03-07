@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
 // 상단바에 보이는 내 프로필
 function getMySimpleProfile() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/profile/simple",
+        "url": "http://localhost:8080/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -21,8 +21,20 @@ function getMySimpleProfile() {
         login_feed_userId = response['userId']
         $('#myProfileUsername').text(response['username'])
         $('#myProfileUsername2').text(response['username'])
+        $('#myProfileUsername3').text(response['username'])
+        $('#myProfileUsername4').text(response['username'])
+        $('#myProfileUsername5').text(response['username'])
+        $('#myProfileUsername6').text(response['username'])
+        $('#myProfileUsername7').text(response['username'])
+        $('#myProfileUsername8').text(response['username']) // 9~10 post_search.js 에 있음
         $('#myProfileImage').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
         $('#myProfileImage2').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage3').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage4').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage5').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage6').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage7').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage8').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
         if (status === 403) { // 권한이 없는 것이니까 로그인으로 보내면 됨
             window.location = "/login.html"
         }
@@ -35,13 +47,27 @@ function getMySimpleProfile() {
         $('#myProfile3').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
         $('#myProfile4').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
         $('#myProfile5').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile6').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile7').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile8').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile9').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile10').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile11').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile12').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile13').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile14').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile15').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile16').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile17').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+    }).error(function () {
+        window.location = "./signin.html"
     });
 }
 
 // 게시글
 function getPost() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts",
+        "url": "http://localhost:8080/posts",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -57,7 +83,30 @@ function getPost() {
             const username = obj['username']
             const profileImage = obj['userProfileImage']
             const openOrEnd = obj['openOrEnd']
-            const emotion = obj['emotion']
+            let emotion = obj['emotion']
+            switch (emotion) {
+                case 'ANGRY':
+                    emotion = "😡";
+                    break;
+                case 'SAD':
+                    emotion = "😭";
+                    break;
+                case 'SCREAM':
+                    emotion = "😱";
+                    break;
+                case 'SHY':
+                    emotion = "😳";
+                    break;
+                case 'HAPPY':
+                    emotion = "😆";
+                    break;
+                case 'LOVE':
+                    emotion = "😍";
+                    break;
+                case 'FLEX':
+                    emotion = "😎";
+                    break;
+            }
             const musicTitle = obj['musicTitle']
             const musicSinger = obj['musicSinger']
             const musicCover = obj['musicCover']
@@ -70,6 +119,9 @@ function getPost() {
 
             if (login_feed_userId !== userId) {
                 showFollowButton(userId, postId)
+            }
+            else {
+                showUpdateButton(userId, postId)
             }
 
             showFeedLikeButton(postId)
@@ -130,9 +182,25 @@ function getPost() {
     });
 }
 
+function showUpdateButton(userId, postId) {
+    $.ajax({
+        url: "http://localhost:8080/posts/" + postId,
+        type: "GET",
+        dataType: "json",
+        headers: {
+            "Authorization": localStorage.getItem("accessToken")
+        },
+        success: function () {
+            update_button = `<div class="follow_button" onclick="window.location.href='./post-update.html?postId=${postId}'" role="link" tabindex="0">수정</div>`
+
+            $('#feed_follow_' + postId).append(update_button)
+        }
+    })
+}
+
 function showFollowButton(userId, postId) {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/" + userId + "/follow-or-unfollow",
+        url: "http://localhost:8080/users/" + userId + "/follow-or-unfollow",
         type: "GET",
         dataType: "json",
         headers: {
@@ -160,7 +228,7 @@ function showFollowButton(userId, postId) {
 
 function followUser(userId) {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/" + userId + "/follow",
+        "url": "http://localhost:8080/users/" + userId + "/follow",
         "method": "POST",
         "timeout": 0,
         "headers": {
@@ -179,7 +247,7 @@ function followUser(userId) {
 
 function unfollowUser(userId) {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/users/" + userId + "/unfollow",
+        "url": "http://localhost:8080/users/" + userId + "/unfollow",
         "method": "DELETE",
         "timeout": 0,
         "headers": {
@@ -199,7 +267,7 @@ function unfollowUser(userId) {
 //게시글 좋아요 or 좋아요 안한 상태 버튼 보이게 하기
 function showFeedLikeButton(postId) {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts/" + postId + "/like-or-unlike",
+        url: "http://localhost:8080/posts/" + postId + "/like-or-unlike",
         type: "GET",
         dataType: "json",
         headers: {
@@ -228,7 +296,7 @@ function showFeedLikeButton(postId) {
 //게시글 좋아요
 function likePost(postId) {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts/" + postId + "/like",
+        url: "http://localhost:8080/posts/" + postId + "/like",
         type: "POST",
         dataType: "json",
         headers: {
@@ -246,7 +314,7 @@ function likePost(postId) {
 //게시글 좋아요 취소
 function unlikePost(postId) {
     $.ajax({
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com/posts/" + postId + "/unlike",
+        url: "http://localhost:8080/posts/" + postId + "/unlike",
         type: "DELETE",
         dataType: "json",
         headers: {
