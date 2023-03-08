@@ -34,7 +34,7 @@ function postCreate() {
 
 function getMySimpleProfile() {
     var settings = {
-        "url": "http://localhost:8080/users/profile/simple",
+        "url": "https://api.odle8.com/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
