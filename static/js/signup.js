@@ -83,7 +83,7 @@ function signUp() {
         contentType: "application/json; charset=UTF-8",
         success: function () {
             alert("회원가입 완료")
-            location.href="signin.html"
+            location.href="../signin.html"
         },
         error: function (response) {
             alert(response.responseJSON.errorMessage)
