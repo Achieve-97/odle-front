@@ -27,14 +27,14 @@ function getMySimpleProfile() {
         $('#myProfileUsername6').text(response['username'])
         $('#myProfileUsername7').text(response['username'])
         $('#myProfileUsername8').text(response['username']) // 9~10 post_search.js 에 있음
-        $('#myProfileImage').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage2').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage3').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage4').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage5').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage6').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage7').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
-        $('#myProfileImage8').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage2').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage3').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage4').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage5').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage6').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage7').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
+        $('#myProfileImage8').attr('src', response['profileImage'] == null ? '../static/image/.nullprofile.jpeg' : response['profileImage'])
         if (status === 403) { // 권한이 없는 것이니까 로그인으로 보내면 됨
             window.location = "/signin.html"
         }
@@ -131,7 +131,7 @@ function getPost() {
                   <div class="photo">
                       <header class="photo__header">
                           <a onclick="window.location.href='./profile.html?userId=${userId}'" role="link" tabindex="0">
-                              <img alt="프로필 사진" src="${profileImage == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : profileImage}" id="profileImage" class="photo__avatar"/>
+                              <img alt="프로필 사진" src="${profileImage == null ? '../static/image/.nullprofile.jpeg' : profileImage}" id="profileImage" class="photo__avatar"/>
                           </a>
                           <div class="photo__user-info">
                               <div>
