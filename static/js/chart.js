@@ -25,7 +25,7 @@ function getMySimpleProfile() {
     $.ajax(settings).done(function (response, status) {
         login_chart_userId = response['userId']
         $('#myProfileUsername3').text(response['username'])
-        $('#myProfileImage3').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage3').attr('src', response['profileImage'] == null ? '../static/images/nullprofile' : response['profileImage'])
         if (status === 403) { // 권한이 없는 것이니까 로그인으로 보내면 됨
             window.location = "/login.html"
         }
@@ -61,7 +61,7 @@ function getAngryChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="angryChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="angryChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
@@ -98,7 +98,7 @@ function getSadChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="sadChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="sadChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
@@ -134,7 +134,7 @@ function getScreamChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="screamChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="screamChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
@@ -170,7 +170,7 @@ function getShyChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="shyChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="shyChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
@@ -206,7 +206,7 @@ function getHappyChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="happyChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="happyChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
@@ -242,7 +242,7 @@ function getLoveChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="loveChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="loveChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
@@ -278,7 +278,7 @@ function getFlexChart() {
 
             const tempHtml = `
                     <div class="chart__musics">
-                        <img alt="앨범 커버" src="${cover == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : cover}" id="flexChartCover">
+                        <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="flexChartCover">
                         <div class="chart__musicInfo">
                             <span style="font-weight: bold">${title}</span>
                             <span>${singer}</span>
