@@ -42,23 +42,23 @@ function getMySimpleProfile() {
         const tokenExpiration = response['tokenExpiration']
         const expiration_time = new Date(tokenExpiration).getTime();
         timer(expiration_time)
-        $('#myProfile1').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile2').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile3').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile4').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile5').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile6').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile7').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile8').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile9').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile10').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile11').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile12').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile13').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile14').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile15').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile16').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
-        $('#myProfile17').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
+        $('#myProfile1').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile2').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile3').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile4').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile5').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile6').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile7').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile8').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile9').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile10').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile11').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile12').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile13').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile14').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile15').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile16').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
+        $('#myProfile17').attr('onclick', `window.location.href='../templates/profile.html?userId=${userId}'`)
     }).fail(function () {
         window.location = "./signin.html"
     });
@@ -130,12 +130,12 @@ function getPost() {
             const tempHtml = `
                   <div class="photo">
                       <header class="photo__header">
-                          <a onclick="window.location.href='./profile.html?userId=${userId}'" role="link" tabindex="0">
+                          <a onclick="window.location.href='../templates/profile.html?userId=${userId}'" role="link" tabindex="0">
                               <img alt="프로필 사진" src="${profileImage == null ? '../static/images/nullprofile.jpeg' : profileImage}" id="profileImage" class="photo__avatar"/>
                           </a>
                           <div class="photo__user-info">
                               <div>
-                                  <a onclick="window.location.href='./profile.html?userId=${userId}'" id="getProfile"  role="link" tabindex="0">
+                                  <a onclick="window.location.href='../templates/profile.html?userId=${userId}'" id="getProfile"  role="link" tabindex="0">
                                       <span class="photo__author" id="profileUsername">${username}</span>
                                   </a>
                               </div>
