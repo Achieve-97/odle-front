@@ -44,7 +44,7 @@ function get_userinfo() {
             }
 
             //프로필 이미지가 없을 때
-            profileImage = (profileImage == null) ? "http://bwptedu.com/assets/image/default-profile.jpg" : profileImage;// 기본 프로필 이미지
+            profileImage = (profileImage == null) ? "../static/images/nullprofile.jpeg" : profileImage;// 기본 프로필 이미지
 
 
             $("#profile__username").append(username);
@@ -159,11 +159,11 @@ function getMySimpleProfile() {
             $("#login_userId").text(login_userId);
             $("#my_username").text(my_username);
 
-            my_profileImage = (my_profileImage == null) ? "http://bwptedu.com/assets/image/default-profile.jpg" : my_profileImage;
+            my_profileImage = (my_profileImage == null) ? "../static/images/nullprofile.jpeg" : my_profileImage;
 
             $("#my_profileImage").attr('src', my_profileImage);
-            $("#my_profile").attr('onclick', `window.location.href='./profile.html?userId=${login_userId}'`)
-            $('#getSimpleProfile').attr('onclick', `window.location.href='./profile.html?userId=${login_userId}'`)
+            $("#my_profile").attr('onclick', `window.location.href='../templates/profile.html?userId=${login_userId}'`)
+            $('#getSimpleProfile').attr('onclick', `window.location.href='../templates/profile.html?userId=${login_userId}'`)
         }
     })
 }
@@ -282,7 +282,7 @@ function showFollowerList() {
         const follwerName = followerList[i]['followerName'];
         let follwerProfileImage = followerList[i]['followerProfileImage'];
 
-        follwerProfileImage = (follwerProfileImage == null) ? "http://bwptedu.com/assets/image/default-profile.jpg" : follwerProfileImage;
+        follwerProfileImage = (follwerProfileImage == null) ? "../static/images/nullprofile.jpeg" : follwerProfileImage;
 
         let follwerTemp = `
                     <div class="follow_profile">
@@ -316,7 +316,7 @@ function showFollowingList() {
         const follwingName = followingList[i]['followingName'];
         let follwingProfileImage = followingList[i]['followingProfileImage'];
 
-        follwingProfileImage = (follwingProfileImage == null) ? "http://bwptedu.com/assets/image/default-profile.jpg" : follwingProfileImage;
+        follwingProfileImage = (follwingProfileImage == null) ? "../static/images/nullprofile.jpeg" : follwingProfileImage;
 
         let follwingTemp = `
                     <div class="follow_profile">
