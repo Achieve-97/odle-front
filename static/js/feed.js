@@ -60,7 +60,7 @@ function getMySimpleProfile() {
         $('#myProfile16').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
         $('#myProfile17').attr('onclick', `window.location.href='./profile.html?userId=${userId}'`)
     }).fail(function () {
-        window.location = "https://s3.ap-northeast-2.amazonaws.com/s3.achieve97.shop/signin.html"
+        window.location = "./signin.html"
     });
 }
 
