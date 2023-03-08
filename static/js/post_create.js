@@ -62,7 +62,7 @@ function getMusicSearchList() {
     const keyword = $(`#music-keyword`).val();
     console.log(option, keyword);
     var settings = {
-        "url": `http://localhost:8080/music/search/${option}/${keyword}`,
+        "url": `https://api.odle8.com/music/search/${option}/${keyword}`,
         "method": "GET",
         "timeout": 0,
         "headers": {
