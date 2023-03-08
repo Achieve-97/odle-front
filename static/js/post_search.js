@@ -25,7 +25,7 @@ function getMySimpleProfile1() {
     $.ajax(settings).done(function (response, status) {
         login_search_userId = response['userId']
         $('#myProfileUsername9').text(response['username'])
-        $('#myProfileImage9').attr('src', response['profileImage'] == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : response['profileImage'])
+        $('#myProfileImage9').attr('src', response['profileImage'] == null ? '../static/images/nullprofile.jpeg' : response['profileImage'])
         if (status === 403) { // 권한이 없는 것이니까 로그인으로 보내면 됨
             window.location = "/login.html"
         }
