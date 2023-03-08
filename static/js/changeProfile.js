@@ -6,7 +6,7 @@ function changeProfile() {
     formData.append("profileImage", $('#profileImage')[0].files[0]);
 
     const settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/profile",
+        "url": "https://api.odle8.com/users/profile",
         "method": "PUT",
         "timeout": 0,
         "headers": {

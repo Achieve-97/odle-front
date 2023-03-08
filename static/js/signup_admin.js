@@ -1,7 +1,7 @@
 function signUpAdmin() {
     $.ajax({
         type: "POST",
-        url: "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/admin-signup",
+        url: "https://api.odle8.com/users/admin-signup",
         data: JSON.stringify({
             username: $(`#username`).val(),
             email: $(`#email`).val(),

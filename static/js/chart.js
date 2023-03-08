@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 
 function getMySimpleProfile() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/profile/simple",
+        "url": "https://api.odle8.com/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -41,7 +41,7 @@ function getMySimpleProfile() {
 
 function getAngryChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/angry",
+        "url": "https://api.odle8.com/music/charts/angry",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -78,7 +78,7 @@ function getAngryChart() {
 
 function getSadChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/sad",
+        "url": "https://api.odle8.com/music/charts/sad",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -114,7 +114,7 @@ function getSadChart() {
 }
 function getScreamChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/scream",
+        "url": "https://api.odle8.com/music/charts/scream",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -150,7 +150,7 @@ function getScreamChart() {
 }
 function getShyChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/shy",
+        "url": "https://api.odle8.com/music/charts/shy",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -186,7 +186,7 @@ function getShyChart() {
 }
 function getHappyChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/happy",
+        "url": "https://api.odle8.com/music/charts/happy",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -222,7 +222,7 @@ function getHappyChart() {
 }
 function getLoveChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/love",
+        "url": "https://api.odle8.com/music/charts/love",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -258,7 +258,7 @@ function getLoveChart() {
 }
 function getFlexChart() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/music/charts/flex",
+        "url": "https://api.odle8.com/music/charts/flex",
         "method": "GET",
         "timeout": 0,
         "headers": {

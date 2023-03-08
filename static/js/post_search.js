@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 // 상단바 프로필 보기
 function getMySimpleProfile1() {
     var settings = {
-        "url": "http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/users/profile/simple",
+        "url": "https://api.odle8.com/users/profile/simple",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -47,7 +47,7 @@ function getTagInfo() {
 // 검색된 게시글 개수
 function getPostSearchCount() {
     var settings = {
-        "url": `http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/search/${word}/post-count`,
+        "url": `https://api.odle8.com/posts/search/${word}/post-count`,
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -66,7 +66,7 @@ function getPostSearchCount() {
 // 검색창 클릭
 function getPostSearchList() {
     const settings = {
-        "url": `http://ec2-3-37-153-26.ap-northeast-2.compute.amazonaws.com:8080/posts/search/${word}`,
+        "url": `https://api.odle8.com/posts/search/${word}`,
         "method": "GET",
         "timeout": 0,
         "headers": {
