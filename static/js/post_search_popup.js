@@ -72,7 +72,7 @@ function get_post(post_id) {
             const modifiedDate = modified_at.getDate();
             const delete_button_style = (post_user_id === login_search_userId) ? '' : 'display: none';
 
-            post_profileImage = (post_profileImage == null) ? "http://bwptedu.com/assets/image/default-profile.jpg" : post_profileImage;
+            post_profileImage = (post_profileImage == null) ? "../static/images/nullprofile.jpeg" : post_profileImage;
             const temp_post = `
             <span class="close" onclick="close_button()">&times;</span>
             <div class="post_container">
