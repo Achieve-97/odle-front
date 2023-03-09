@@ -173,7 +173,7 @@ function get_comments(post_id) {
                 const delete_button_style = (comment_user_id === login_search_userId) ? '' : 'display: none'
 
                 if (comment_user_profile == null) {
-                    comment_user_profile = '../static/images/nullprofile.jpg"';
+                    comment_user_profile = '../static/images/nullprofile.jpeg"';
                 }
 
                 temp_comment = `
