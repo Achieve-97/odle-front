@@ -172,6 +172,10 @@ function get_comments(post_id) {
                 comment_modified_at = rc[i].modifiedAt;
                 const delete_button_style = (comment_user_id === login_feed_userId) ? '' : 'display: none';
 
+                if (comment_user_profile == null) {
+                    comment_user_profile = '../static/images/nullprofile.jpeg"';
+                }
+
                 temp_comment = `
                 <div class="comment_box">
                     <div class="comment_info">
