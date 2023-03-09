@@ -21,6 +21,7 @@ function changeProfile() {
     $.ajax(settings).done(function (response) {
         console.log(response);
         alert("변경사항 저장 완료");
+        window.location.href = './profile.html';
     }).fail(function (jqXHR, textStatus, errorThrown) {
         if (jqXHR.status === 401) {
             alert("로그인이 필요합니다.");
