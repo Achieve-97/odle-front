@@ -1,8 +1,8 @@
 function changeProfile() {
     const accessToken = localStorage.getItem('accessToken');
     const formData = new FormData();
-    formData.append("username", $(`#username`).val() || "{{username}}");
-    formData.append("introduction", $(`#introduction`).val() || "{{introduction}}");
+    formData.append("username", $(`#username`).val());
+    formData.append("introduction", $(`#introduction`).val());
     formData.append("profileImage", $('#profileImage')[0].files[0]);
 
     const settings = {
@@ -19,6 +19,7 @@ function changeProfile() {
     };
 
     $.ajax(settings).done(function (response) {
+        console.log(response);
         alert("변경사항 저장 완료");
         location.reload();
     }).fail(function (jqXHR, textStatus, errorThrown) {
