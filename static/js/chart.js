@@ -50,8 +50,6 @@ function getAngryChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']
@@ -87,8 +85,6 @@ function getSadChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']
@@ -123,8 +119,6 @@ function getScreamChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']
@@ -159,8 +153,6 @@ function getShyChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']
@@ -195,8 +187,6 @@ function getHappyChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']
@@ -231,8 +221,6 @@ function getLoveChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']
@@ -267,8 +255,6 @@ function getFlexChart() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
-
         for (let i = 0; i <= 6; i++) {
             const obj = response[i];
             const title = obj['title']

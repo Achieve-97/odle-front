@@ -135,7 +135,6 @@ function get_post(post_id) {
                 </span>
             `
             $('.tags_name').append(tagHtml)
-            console.log(tagHtml)
         }
         append_tag_list(tagList); //태그가 있을 때만 태그 기재
         get_comments(post_id); //코멘트 기재

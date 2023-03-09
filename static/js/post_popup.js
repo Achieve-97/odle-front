@@ -77,7 +77,6 @@ function get_post(post_id) {
             const modifiedMonth = modified_at.getMonth() + 1;
             const modifiedDate = modified_at.getDate();
             const delete_button_style = (post_user_id === login_userId) ? '' : 'display: none';
-            console.log(delete_button_style, post_user_id, login_userId);
             post_profileImage = (post_profileImage ==null)? "../static/images/nullprofile.jpeg":post_profileImage;
             const temp_post = `
             <span class="close" onclick="close_button()">&times;</span>
@@ -145,7 +144,6 @@ function get_post(post_id) {
                     </span>
                 `
                 $('.tags_name').append(tagHtml)
-                console.log(tagHtml)
             }
             append_tag_list(tagList); //태그가 있을 때만 태그 기재
             get_comments(post_id); //코멘트 기재

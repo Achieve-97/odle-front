@@ -60,7 +60,6 @@ function getMySimpleProfile() {
 function getMusicSearchList() {
     const option = $(`input[name='music-search']:checked`).val();
     const keyword = $(`#music-keyword`).val();
-    console.log(option, keyword);
     var settings = {
         "url": `https://api.odle8.com/music/search/${option}/${keyword}`,
         "method": "GET",
