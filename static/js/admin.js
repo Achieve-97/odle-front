@@ -77,7 +77,7 @@ function activateUser(userId) {
 //유저 비활성화
 function inactivateUser(userId) {
     $.ajax({
-        url: api_url + "users/" + userId + "/activation/admin",
+        url: api_url + "users/" + userId + "/inactivation/admin",
         type: "PATCH",
         contentType: "application/json; charset=UTF-8",
         headers: {
