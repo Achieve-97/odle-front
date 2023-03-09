@@ -78,7 +78,7 @@ function get_post(post_id) {
             const modifiedDate = modified_at.getDate();
             const delete_button_style = (post_user_id === login_userId) ? '' : 'display: none';
             console.log(delete_button_style, post_user_id, login_userId);
-            post_profileImage = (post_profileImage ==null)? "../static/images/nullprofile":post_profileImage;
+            post_profileImage = (post_profileImage ==null)? "../static/images/nullprofile.jpeg":post_profileImage;
             const temp_post = `
             <span class="close" onclick="close_button()">&times;</span>
             <div class="post_container">

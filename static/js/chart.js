@@ -25,7 +25,7 @@ function getMySimpleProfile() {
     $.ajax(settings).done(function (response, status) {
         login_chart_userId = response['userId']
         $('#myProfileUsername3').text(response['username'])
-        $('#myProfileImage3').attr('src', response['profileImage'] == null ? '../static/images/nullprofile' : response['profileImage'])
+        $('#myProfileImage3').attr('src', response['profileImage'] == null ? '../static/images/nullprofile.jpeg' : response['profileImage'])
         if (status === 403) { // 권한이 없는 것이니까 로그인으로 보내면 됨
             window.location = "/login.html"
         }
