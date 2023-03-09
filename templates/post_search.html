@@ -27,7 +27,7 @@
     <div class="navigation__column" style="display: inline-block;">
         <i class="fa fa-search"></i>
         <input type="text" placeholder="태그를 검색해보세요 ('#' 제외)" id="search_word" style="width: 260px; text-align: left;">
-        <input type="button" value="검색" onclick="getSearchWord()" class="search_btn">
+        <input type="button" value="검색" onclick="getSearchWord()" class="search_btn" style="cursor : pointer">
     </div>
     <div class="mini_porfile_box">
         <div class="expiration_time">
@@ -37,12 +37,12 @@
         <div class="navigation__profile">
             <div class="photo__header" id="getMySimpleProfile1">
                 <div>
-                    <a id="myProfile18" role="link" tabindex="0">
+                    <a id="myProfile18" role="link" tabindex="0" style="cursor : pointer">
                         <img src="" id="myProfileImage9" class="photo__avatar"/>
                     </a>
                 </div>
                 <div class="photo__user-info">
-                    <a id="myProfile19" role="link" tabindex="0">
+                    <a id="myProfile19" role="link" tabindex="0" style="cursor : pointer">
                         <span class="photo__author" id="myProfileUsername9"></span>
                     </a>
                 </div>
@@ -73,7 +73,7 @@
         <li class="list">
             <b></b>
             <b></b>
-            <a id="myProfile20">
+            <a id="myProfile20" style="cursor : pointer">
                 <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                 <span class="title">프로필</span>
             </a>
@@ -114,7 +114,7 @@
             <b></b>
             <b></b>
             <a>
-                <span class="icon" onclick="logOut()"><ion-icon name="log-out-outline"></ion-icon></span>
+                <span class="icon" onclick="logOut()" style="cursor : pointer"><ion-icon name="log-out-outline"></ion-icon></span>
                 <span class="title">로그아웃</span>
             </a>
         </li>

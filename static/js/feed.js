@@ -130,12 +130,12 @@ function getPost() {
                   <div class="photo">
                       <header class="photo__header">
                           <a onclick="window.location.href='../templates/profile.html?userId=${userId}'" role="link" tabindex="0">
-                              <img alt="프로필 사진" src="${profileImage == null ? '../static/images/nullprofile.jpeg' : profileImage}" id="profileImage" class="photo__avatar"/>
+                              <img alt="프로필 사진" src="${profileImage == null ? '../static/images/nullprofile.jpeg' : profileImage}" id="profileImage" class="photo__avatar" style="cursor : pointer"/>
                           </a>
                           <div class="photo__user-info">
                               <div>
                                   <a onclick="window.location.href='../templates/profile.html?userId=${userId}'" id="getProfile"  role="link" tabindex="0">
-                                      <span class="photo__author" id="profileUsername">${username}</span>
+                                      <span class="photo__author" id="profileUsername" style="cursor : pointer">${username}</span>
                                   </a>
                               </div>
                               <div class="arr2">

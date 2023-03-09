@@ -290,7 +290,7 @@ function showFollowerList() {
                     <p id="follower_profileImage">
                     <img src="${follwerProfileImage}"></p>
                         <span id="follower_username">${follwerName}</span>
-                        <p class="follow_button" onclick="followUser(${followerId})">팔로우 하기</p>
+                        <p class="follow_button" onclick="followUser(${followerId})" style="cursor : pointer">팔로우 하기</p>
                     </div>   
                     `
         $('#follower_list_container').append(follwerTemp);
@@ -324,7 +324,7 @@ function showFollowingList() {
                     <p id="following_profileImage">
                     <img src="${follwingProfileImage}"></p>
                         <span id="following_username">${follwingName}</span>
-                        <p class="follow_button" onclick="unfollowUser(${followingId})">팔로우 취소</p>
+                        <p class="follow_button" onclick="unfollowUser(${followingId})" style="cursor : pointer">팔로우 취소</p>
                     </div>   
                     `
         $('#following_list_container').append(follwingTemp);

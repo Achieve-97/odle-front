@@ -62,9 +62,9 @@ function getAngryChart() {
             const tempHtml = `
                     <div class="chart__musics">
                         <img alt="앨범 커버" src="${cover == null ? '../static/images/nullprofile' : cover}" id="angryChartCover">
-                        <div class="chart__musicInfo">
-                            <span style="font-weight: bold">${title}</span>
-                            <span>${singer}</span>
+                        <div class="chart__musicInfo" style="cursor : pointer">
+                            <span style="font-weight: bold" style="cursor : pointer">${title}</span>
+                            <span style="cursor : pointer">${singer}</span>
                         </div>
                         <div class="chart__emotion_count">
                             <span>post ${todayAngryCount}</span>
