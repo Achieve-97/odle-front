@@ -12,7 +12,6 @@ function signIn() {
         localStorage.setItem('accessToken', xhr.getResponseHeader('Authorization'))
         document.cookie =
             'RefreshToken' + '=' + xhr.getResponseHeader('RefreshToken') + ';path=/';
-        alert("로그인 완료");
         window.location = 'index.html'
     }).fail(function (response) {
         console.log(response.responseJSON)
