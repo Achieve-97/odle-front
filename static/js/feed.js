@@ -111,7 +111,6 @@ function getPost() {
             const musicSinger = obj['musicSinger']
             const musicCover = obj['musicCover']
             const content = obj['content']
-            const tagList = obj['tagList']
             const likeCount = obj['likeCount']
             const commentCount = obj['commentCount']
             const createdAt = new Date(obj['createdAt'])
@@ -169,8 +168,7 @@ function getPost() {
                           <div class="photo__contents" id="content">
                               <a>${content}</a>
                           </div>
-                          <div class="photo__tags" id="tagList">
-                              <a href="#;">${tagList}</a>
+                          <div class="tags_name">
                           </div>
                           <div id="feed_popup_btn_${postId}" onclick="open_feed_popup(${postId})">${commentCount}개의 댓글 모두 보기</div>
                           <span class="photo__time-ago" id="createdAt">${elapsedText(createdAt)}</span>
@@ -178,6 +176,18 @@ function getPost() {
                  </div>
           `
             $('#getPost').append(tempHtml)
+            const tagList = obj['tagList'].split(' ');
+            for (let i = 0; i < tagList.length; i++) {
+                const tag = tagList[i];
+                const word = tag.replace('#', '')
+                const tagHtml = `
+                    <span id="post_tag" onclick="window.location.href='./post_search.html?query=${word}'" style="cursor : pointer">
+                        ${tag}
+                    </span>
+                `
+                $('.tags_name').append(tagHtml)
+                console.log(tagHtml)
+            }
         }
     });
 }

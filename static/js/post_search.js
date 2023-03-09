@@ -85,9 +85,7 @@ function getPostSearchList() {
 
             const tempHtml = `
                             <div id="post_search_popup_btn_${postId}" class="post_search__photo" onclick="open_post_search_popup(${postId})">
-                            <a href="#개별게시글링크">
-                                <img src="${cover}" />
-                            </a>
+                            <img src="${cover}" />
                             <span>${title}
                             <br>-${singer}</span>
                         </div>
