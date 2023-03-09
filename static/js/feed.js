@@ -181,7 +181,7 @@ function getPost() {
                 const tag = tagList[i];
                 const word = tag.replace('#', '')
                 const tagHtml = `
-                    <span id="post_tag" onclick="window.location.href='./post_search.html?query=${word}'" style="cursor : pointer">
+                    <span id="post_tag" onclick="window.location.href='../templates/post_search.html?query=${word}'" style="cursor : pointer">
                         ${tag}
                     </span>
                 `
