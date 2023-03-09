@@ -22,4 +22,12 @@ function signIn() {
                 alert("에러: " + response.status)
             }
     });
+
+    $(document).ready(function() {
+        $("#password").keydown(function(event) {
+            if (event.keyCode === 13) {
+                signIn();
+            }
+        });
+    });
 }
