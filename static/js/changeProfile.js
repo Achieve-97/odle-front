@@ -19,7 +19,6 @@ function changeProfile() {
     };
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
         alert("변경사항 저장 완료");
         location.reload();
     }).fail(function (jqXHR, textStatus, errorThrown) {

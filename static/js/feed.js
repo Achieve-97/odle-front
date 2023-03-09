@@ -186,7 +186,6 @@ function getPost() {
                     </span>
                 `
                 $(`#tags_name_${postId}`).append(tagHtml)
-                console.log(tagHtml)
             }
         }
     });
