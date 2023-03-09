@@ -168,13 +168,13 @@ function getPost() {
                           <div class="photo__contents" id="content">
                               <a>${content}</a>
                           </div>
-                          <div class="tags_name">
+                          <div id="tags_name_${postId}">
                           </div>
                           <div id="feed_popup_btn_${postId}" onclick="open_feed_popup(${postId})">${commentCount}개의 댓글 모두 보기</div>
                           <span class="photo__time-ago" id="createdAt">${elapsedText(createdAt)}</span>
                       </div>
                  </div>
-          `
+            `
             $('#getPost').append(tempHtml)
             const tagList = obj['tagList'].split(' ');
             for (let i = 0; i < tagList.length; i++) {
@@ -185,7 +185,7 @@ function getPost() {
                         ${tag}
                     </span>
                 `
-                $('.tags_name').append(tagHtml)
+                $(`#tags_name_${postId}`).append(tagHtml)
                 console.log(tagHtml)
             }
         }
