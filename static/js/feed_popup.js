@@ -78,11 +78,11 @@ function get_post(post_id) {
             <div class="feed_container">
                 <div class="feed_info_container">
                     <p id="myUserId" style="display: none"></p>
-                    <a id="myProfileImage1">
+                    <a id="myProfileImage1" style="cursor : pointer">
                         <img src="${feed_profileImage == null ? '../static/images/nullprofile.jpeg' : feed_profileImage}"></a>
                     </a>
                     <div class="post_info">
-                        <span id="myUsername1">${feed_username}</span>
+                        <span id="myUsername1" style="cursor : pointer">${feed_username}</span>
                         <div class="post_time">
                             <span>작성일: ${createdYear}/${createdMonth < 10 ? '0' + createdMonth : createdMonth}/${createdDate < 10 ? '0' + createdDate : createdDate}</span>
                             <span>마지막 변경일: ${modifiedYear}/${modifiedMonth < 10 ? '0' + modifiedMonth : modifiedMonth}/${modifiedDate < 10 ? '0' + modifiedDate : modifiedDate}</span>

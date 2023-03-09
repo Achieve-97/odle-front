@@ -84,7 +84,7 @@ function getPostSearchList() {
             const cover = obj['cover']
 
             const tempHtml = `
-                            <div id="post_search_popup_btn_${postId}" class="post_search__photo" onclick="open_post_search_popup(${postId})">
+                            <div id="post_search_popup_btn_${postId}" class="post_search__photo" onclick="open_post_search_popup(${postId})" style="cursor : pointer">
                             <img src="${cover}" />
                             <span>${title}
                             <br>-${singer}</span>

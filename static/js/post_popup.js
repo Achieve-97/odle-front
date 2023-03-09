@@ -85,10 +85,10 @@ function get_post(post_id) {
             <div class="post_info_container">
                 <p id="post_userId" style="display: none">${post_user_id}</p>
                 <p id="my_profileImage">
-                    <img src="${post_profileImage}"></a>
+                    <img src="${post_profileImage}" style="cursor : pointer"></a>
                 </p>
                 <div class="post_info">
-                    <span id="my_username">${post_username}</span>
+                    <span id="my_username" style="cursor : pointer">${post_username}</span>
                     <div class="post_time">
                         <span>작성일: ${createdYear}/${createdMonth < 10 ? '0' + createdMonth : createdMonth}/${createdDate < 10 ? '0' + createdDate : createdDate}</span>
                         <span>마지막 변경일: ${modifiedYear}/${modifiedMonth < 10 ? '0' + modifiedMonth : modifiedMonth}/${modifiedDate < 10 ? '0' + modifiedDate : modifiedDate}</span>
