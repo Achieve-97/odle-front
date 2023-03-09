@@ -16,7 +16,7 @@ function logOut() {
         .done(function (response) {
             localStorage.setItem('accessToken', '');
             console.log(response);
-            window.location = 'signin.html'
+            window.location = '../signin.html'
         });
 }
 
