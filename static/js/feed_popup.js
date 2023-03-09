@@ -79,7 +79,7 @@ function get_post(post_id) {
                 <div class="feed_info_container">
                     <p id="myUserId" style="display: none"></p>
                     <a id="myProfileImage1">
-                        <img src="${feed_profileImage == null ? 'http://bwptedu.com/assets/image/default-profile.jpg' : feed_profileImage}"></a>
+                        <img src="${feed_profileImage == null ? '../static/images/nullprofile' : feed_profileImage}"></a>
                     </a>
                     <div class="post_info">
                         <span id="myUsername1">${feed_username}</span>
