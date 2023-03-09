@@ -14,5 +14,13 @@ function signIn() {
             'RefreshToken' + '=' + xhr.getResponseHeader('RefreshToken') + ';path=/';
         alert("로그인 완료");
         window.location = 'index.html'
-    })
+    }).fail(function (response) {
+        console.log(response.responseJSON)
+        const errorMessage = response.responseJSON['errorMessage']
+            if (errorMessage) {
+                alert(errorMessage);
+            } else {
+                alert("에러: " + response.status)
+            }
+    });
 }
