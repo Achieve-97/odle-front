@@ -191,7 +191,7 @@ function showUpdateButton(userId, postId) {
             "Authorization": localStorage.getItem("accessToken")
         },
         success: function () {
-            update_button = `<div class="follow_button" onclick="window.location.href='./post-update.html?postId=${postId}'" role="link" tabindex="0">수정</div>`
+            update_button = `<div class="follow_button" onclick="window.location.href='../templates/post-update.html?postId=${postId}'" role="link" tabindex="0">수정</div>`
 
             $('#feed_follow_' + postId).append(update_button)
         }
