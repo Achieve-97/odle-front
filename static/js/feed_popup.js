@@ -61,7 +61,7 @@ function get_post(post_id) {
                     emotion = "😎";
                     break;
             }
-            const tag_list = response.tagList;
+
             const comment_count = response.commentCount;
             const created_at = new Date(response.createdAt);
             const modified_at = new Date(response.modifiedAt);
@@ -108,7 +108,8 @@ function get_post(post_id) {
                 <div class="post_content_container">
                     <p id="likeCount" style="font-weight: 600;">좋아요 ${like_count}개</p>
                     <p id="postContent">${content}</p>
-                    <p id="postTag">${tag_list}</p>
+                    <div class="tags_name">
+                    </div>
                 </div>
                 <hr style="border: solid 1px lightgray; margin-bottom: 3%; margin-top: 3%;">
                 <div class="comment_textbox">
@@ -124,7 +125,19 @@ function get_post(post_id) {
             </div>
             `
         $('#feed_popup').append(temp_post);
-        append_tag_list(tag_list); //태그가 있을 때만 태그 기재
+        const tagList = response.tagList.split(' ');
+        for (let i = 0; i < tagList.length; i++) {
+            const tag = tagList[i];
+            const word = tag.replace('#', '')
+            const tagHtml = `
+                <span id="post_tag" onclick="window.location.href='./post_search.html?query=${word}'" style="cursor : pointer">
+                    ${tag}
+                </span>
+            `
+            $('.tags_name').append(tagHtml)
+            console.log(tagHtml)
+        }
+        append_tag_list(tagList); //태그가 있을 때만 태그 기재
         get_comments(post_id); //코멘트 기재
         }
     });
