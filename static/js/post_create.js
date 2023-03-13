@@ -105,6 +105,13 @@ function close() {
     document.querySelector(".background2").className = "background2";
 }
 
+$('.background2').click(function(event) {
+    if (!$(event.target).closest('.window').length) {
+        close();
+    }
+});
+
+
 document.querySelector("#show").addEventListener('click', show);
 document.querySelector("#close").addEventListener('click', close);
 
