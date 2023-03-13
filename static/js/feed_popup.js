@@ -1,3 +1,11 @@
+$(document).ready(function() {
+    $("#PostComment").keypress(function(e) {
+        if (e.which === 13) {
+            create_comment();
+        }
+    });
+});
+
 // Get the modal
 var feed_modal = document.getElementById('feed_modal');
 
