@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $("#PostComment").keydown(function(event) {
-        if (event.keyCode === 13) {
+    $("#PostComment").keypress(function(e) {
+        if (e.which === 13) {
             create_comment();
         }
     });
