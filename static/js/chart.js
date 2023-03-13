@@ -41,7 +41,7 @@ function getMySimpleProfile() {
 
 function getAngryChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/angry",
+        "url": "https://api.odle8.com/music/charts/ANGRY",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -76,7 +76,7 @@ function getAngryChart() {
 
 function getSadChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/sad",
+        "url": "https://api.odle8.com/music/charts/SAD",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -110,7 +110,7 @@ function getSadChart() {
 }
 function getScreamChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/scream",
+        "url": "https://api.odle8.com/music/charts/SCREAM",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -144,7 +144,7 @@ function getScreamChart() {
 }
 function getShyChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/shy",
+        "url": "https://api.odle8.com/music/charts/SHY",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -178,7 +178,7 @@ function getShyChart() {
 }
 function getHappyChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/happy",
+        "url": "https://api.odle8.com/music/charts/HAPPY",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -212,7 +212,7 @@ function getHappyChart() {
 }
 function getLoveChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/love",
+        "url": "https://api.odle8.com/music/charts/LOVE",
         "method": "GET",
         "timeout": 0,
         "headers": {
@@ -246,7 +246,7 @@ function getLoveChart() {
 }
 function getFlexChart() {
     var settings = {
-        "url": "https://api.odle8.com/music/charts/flex",
+        "url": "https://api.odle8.com/music/charts/FLEX",
         "method": "GET",
         "timeout": 0,
         "headers": {
