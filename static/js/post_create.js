@@ -92,6 +92,8 @@ function selectMusic(melonMusicId, title, singer, cover) {
     $('#post-title').text(title)
     $('#post-singer').text(singer)
     document.getElementById("post-cover").src = cover
+
+    alert("노래 선택 완료");
 }
 
 
