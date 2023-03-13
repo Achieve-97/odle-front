@@ -1,3 +1,11 @@
+$(document).ready(function() {
+    $("#PostComment").keydown(function(event) {
+        if (event.keyCode === 13) {
+            create_comment();
+        }
+    });
+});
+
 // Get the modal
 var post_modal = document.getElementById('post_modal');
 
@@ -369,27 +377,22 @@ function unlike_comment(post_id, comment_id) {
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ댓글 작성 및 삭제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 function create_comment(post_id) {
-    $('#comment_textbox').on('keydown', function(event) {
-        if (event.keyCode === 13) {
-            $.ajax({
-                url: "https://api.odle8.com/posts/" + post_id + "/comments",
-                type: "POST",
-                contentType: "application/json; charset=UTF-8",
-                headers: {
-                    "Authorization": localStorage.getItem("accessToken")
-                },
-                data: JSON.stringify({
-                    content: $('#comment_textbox').val()
-                }),
-                success: function (response) {
-                    close_button()
-                    open_post_popup(post_id)
-                }
-            });
+    $.ajax({
+        url: "https://api.odle8.com/posts/" + post_id + "/comments",
+        type: "POST",
+        contentType: "application/json; charset=UTF-8",
+        headers: {
+            "Authorization": localStorage.getItem("accessToken")
+        },
+        data: JSON.stringify({
+            content: $('#comment_textbox').val()
+        }),
+        success: function (response) {
+            close_button()
+            open_post_popup(post_id)
         }
     });
 }
-
 
 function delete_comment(post_id, comment_id) {
     $.ajax({

@@ -1,6 +1,14 @@
 jQuery(document).ready(function ($) {
     getMySimpleProfile();
+
+    // 엔터키 입력 시 검색 실행
+    $('#music-keyword').keypress(function(e) {
+        if(e.which === 13) { // Enter key
+            getMusicSearchList();
+        }
+    });
 });
+
 
 let post_url_userId;
 
